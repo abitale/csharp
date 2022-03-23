@@ -1,0 +1,16 @@
+D:\Github\CSharp\sesi05\polymorph\overloading\bin\Debug\net5.0\overloading.exe
+D:\Github\CSharp\sesi05\polymorph\overloading\bin\Debug\net5.0\overloading.deps.json
+D:\Github\CSharp\sesi05\polymorph\overloading\bin\Debug\net5.0\overloading.runtimeconfig.json
+D:\Github\CSharp\sesi05\polymorph\overloading\bin\Debug\net5.0\overloading.runtimeconfig.dev.json
+D:\Github\CSharp\sesi05\polymorph\overloading\bin\Debug\net5.0\overloading.dll
+D:\Github\CSharp\sesi05\polymorph\overloading\bin\Debug\net5.0\ref\overloading.dll
+D:\Github\CSharp\sesi05\polymorph\overloading\bin\Debug\net5.0\overloading.pdb
+D:\Github\CSharp\sesi05\polymorph\overloading\obj\Debug\net5.0\overloading.csproj.AssemblyReference.cache
+D:\Github\CSharp\sesi05\polymorph\overloading\obj\Debug\net5.0\overloading.GeneratedMSBuildEditorConfig.editorconfig
+D:\Github\CSharp\sesi05\polymorph\overloading\obj\Debug\net5.0\overloading.AssemblyInfoInputs.cache
+D:\Github\CSharp\sesi05\polymorph\overloading\obj\Debug\net5.0\overloading.AssemblyInfo.cs
+D:\Github\CSharp\sesi05\polymorph\overloading\obj\Debug\net5.0\overloading.csproj.CoreCompileInputs.cache
+D:\Github\CSharp\sesi05\polymorph\overloading\obj\Debug\net5.0\overloading.dll
+D:\Github\CSharp\sesi05\polymorph\overloading\obj\Debug\net5.0\ref\overloading.dll
+D:\Github\CSharp\sesi05\polymorph\overloading\obj\Debug\net5.0\overloading.pdb
+D:\Github\CSharp\sesi05\polymorph\overloading\obj\Debug\net5.0\overloading.genruntimeconfig.cache

@@ -1,0 +1,16 @@
+D:\Github\CSharp\sesi05\inheritance\obj\Debug\net5.0\inheritance.csproj.AssemblyReference.cache
+D:\Github\CSharp\sesi05\inheritance\obj\Debug\net5.0\inheritance.GeneratedMSBuildEditorConfig.editorconfig
+D:\Github\CSharp\sesi05\inheritance\obj\Debug\net5.0\inheritance.AssemblyInfoInputs.cache
+D:\Github\CSharp\sesi05\inheritance\obj\Debug\net5.0\inheritance.AssemblyInfo.cs
+D:\Github\CSharp\sesi05\inheritance\obj\Debug\net5.0\inheritance.csproj.CoreCompileInputs.cache
+D:\Github\CSharp\sesi05\inheritance\bin\Debug\net5.0\inheritance.exe
+D:\Github\CSharp\sesi05\inheritance\bin\Debug\net5.0\inheritance.deps.json
+D:\Github\CSharp\sesi05\inheritance\bin\Debug\net5.0\inheritance.runtimeconfig.json
+D:\Github\CSharp\sesi05\inheritance\bin\Debug\net5.0\inheritance.runtimeconfig.dev.json
+D:\Github\CSharp\sesi05\inheritance\bin\Debug\net5.0\inheritance.dll
+D:\Github\CSharp\sesi05\inheritance\bin\Debug\net5.0\ref\inheritance.dll
+D:\Github\CSharp\sesi05\inheritance\bin\Debug\net5.0\inheritance.pdb
+D:\Github\CSharp\sesi05\inheritance\obj\Debug\net5.0\inheritance.dll
+D:\Github\CSharp\sesi05\inheritance\obj\Debug\net5.0\ref\inheritance.dll
+D:\Github\CSharp\sesi05\inheritance\obj\Debug\net5.0\inheritance.pdb
+D:\Github\CSharp\sesi05\inheritance\obj\Debug\net5.0\inheritance.genruntimeconfig.cache

@@ -1,0 +1,16 @@
+D:\Github\CSharp\sesi05\laptop\obj\Debug\net5.0\laptop.csproj.AssemblyReference.cache
+D:\Github\CSharp\sesi05\laptop\obj\Debug\net5.0\laptop.GeneratedMSBuildEditorConfig.editorconfig
+D:\Github\CSharp\sesi05\laptop\obj\Debug\net5.0\laptop.AssemblyInfoInputs.cache
+D:\Github\CSharp\sesi05\laptop\obj\Debug\net5.0\laptop.AssemblyInfo.cs
+D:\Github\CSharp\sesi05\laptop\obj\Debug\net5.0\laptop.csproj.CoreCompileInputs.cache
+D:\Github\CSharp\sesi05\laptop\bin\Debug\net5.0\laptop.exe
+D:\Github\CSharp\sesi05\laptop\bin\Debug\net5.0\laptop.deps.json
+D:\Github\CSharp\sesi05\laptop\bin\Debug\net5.0\laptop.runtimeconfig.json
+D:\Github\CSharp\sesi05\laptop\bin\Debug\net5.0\laptop.runtimeconfig.dev.json
+D:\Github\CSharp\sesi05\laptop\bin\Debug\net5.0\laptop.dll
+D:\Github\CSharp\sesi05\laptop\bin\Debug\net5.0\ref\laptop.dll
+D:\Github\CSharp\sesi05\laptop\bin\Debug\net5.0\laptop.pdb
+D:\Github\CSharp\sesi05\laptop\obj\Debug\net5.0\laptop.dll
+D:\Github\CSharp\sesi05\laptop\obj\Debug\net5.0\ref\laptop.dll
+D:\Github\CSharp\sesi05\laptop\obj\Debug\net5.0\laptop.pdb
+D:\Github\CSharp\sesi05\laptop\obj\Debug\net5.0\laptop.genruntimeconfig.cache

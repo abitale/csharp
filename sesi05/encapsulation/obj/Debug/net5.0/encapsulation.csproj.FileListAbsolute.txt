@@ -1,0 +1,16 @@
+D:\Github\CSharp\sesi05\encapsulation\obj\Debug\net5.0\encapsulation.csproj.AssemblyReference.cache
+D:\Github\CSharp\sesi05\encapsulation\obj\Debug\net5.0\encapsulation.GeneratedMSBuildEditorConfig.editorconfig
+D:\Github\CSharp\sesi05\encapsulation\obj\Debug\net5.0\encapsulation.AssemblyInfoInputs.cache
+D:\Github\CSharp\sesi05\encapsulation\obj\Debug\net5.0\encapsulation.AssemblyInfo.cs
+D:\Github\CSharp\sesi05\encapsulation\obj\Debug\net5.0\encapsulation.csproj.CoreCompileInputs.cache
+D:\Github\CSharp\sesi05\encapsulation\bin\Debug\net5.0\encapsulation.exe
+D:\Github\CSharp\sesi05\encapsulation\bin\Debug\net5.0\encapsulation.deps.json
+D:\Github\CSharp\sesi05\encapsulation\bin\Debug\net5.0\encapsulation.runtimeconfig.json
+D:\Github\CSharp\sesi05\encapsulation\bin\Debug\net5.0\encapsulation.runtimeconfig.dev.json
+D:\Github\CSharp\sesi05\encapsulation\bin\Debug\net5.0\encapsulation.dll
+D:\Github\CSharp\sesi05\encapsulation\bin\Debug\net5.0\ref\encapsulation.dll
+D:\Github\CSharp\sesi05\encapsulation\bin\Debug\net5.0\encapsulation.pdb
+D:\Github\CSharp\sesi05\encapsulation\obj\Debug\net5.0\encapsulation.dll
+D:\Github\CSharp\sesi05\encapsulation\obj\Debug\net5.0\ref\encapsulation.dll
+D:\Github\CSharp\sesi05\encapsulation\obj\Debug\net5.0\encapsulation.pdb
+D:\Github\CSharp\sesi05\encapsulation\obj\Debug\net5.0\encapsulation.genruntimeconfig.cache
