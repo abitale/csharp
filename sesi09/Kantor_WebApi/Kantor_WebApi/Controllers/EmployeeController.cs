@@ -13,6 +13,7 @@ namespace Kantor_WebApi.Controllers
         {
             this._context = context;
         }
+        [HttpGet(Name = "Get Employee")]
         public ActionResult<IEnumerable<EmployeeItem>> GetEmployeeItems()
         {
             _context = HttpContext.RequestServices.GetService(typeof(EmployeeContext)) as EmployeeContext;
@@ -22,7 +23,7 @@ namespace Kantor_WebApi.Controllers
         public ActionResult<IEnumerable<EmployeeItem>> GetEmployeeItem(string id)
         {
             _context = HttpContext.RequestServices.GetService(typeof(EmployeeContext)) as EmployeeContext;
-            return GetEmployeeItem(id);
+            return _context.GetEmployee(id);
         }
     }
 }

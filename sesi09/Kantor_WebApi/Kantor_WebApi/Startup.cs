@@ -23,7 +23,6 @@ namespace Kantor_WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRazorPages();
             services.AddControllers();
             services.Add(new ServiceDescriptor(typeof(Models.EmployeeContext), new Models.EmployeeContext(Configuration.GetConnectionString("DefaultConnection"))));
         }
@@ -51,7 +50,7 @@ namespace Kantor_WebApi
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapRazorPages();
+                endpoints.MapControllers();
             });
         }
     }
