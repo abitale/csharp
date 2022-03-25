@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 
 namespace WebApi1.Models
@@ -20,22 +21,29 @@ namespace WebApi1.Models
 
             using (MySqlConnection connection = GetConnection())
             {
-                connection.Open();
-                MySqlCommand command = new MySqlCommand("SELECT * FROM employee", connection);
-                using (MySqlDataReader reader = command.ExecuteReader())
+                try
                 {
-                    while (reader.Read())
+                    connection.Open();
+                    MySqlCommand command = new MySqlCommand("SELECT * FROM employee", connection);
+                    using (MySqlDataReader reader = command.ExecuteReader())
                     {
-                        list.Add(new EmployeeItem()
+                        while (reader.Read())
                         {
-                            id = reader.GetInt32("id"),
-                            nama = reader.GetString("nama"),
-                            jenkel = reader.GetString("jenkel"),
-                            alamat = reader.GetString("alamat")
-                        });
+                            list.Add(new EmployeeItem()
+                            {
+                                id = reader.GetInt32("id"),
+                                nama = reader.GetString("nama"),
+                                jenkel = reader.GetString("jenkel"),
+                                alamat = reader.GetString("alamat")
+                            });
+                        }
                     }
+                    connection.Close();
                 }
-                connection.Close();
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
             }
             return list;
         }
@@ -44,24 +52,32 @@ namespace WebApi1.Models
             List<EmployeeItem> list = new List<EmployeeItem>();
             using (MySqlConnection connection = GetConnection())
             {
-                connection.Open();
-                MySqlCommand command = new MySqlCommand("SELECT * FROM employee WHERE id=@id", connection);
-                command.Parameters.AddWithValue("@id", id);
-
-                using (MySqlDataReader reader = command.ExecuteReader())
+                try
                 {
-                    while (reader.Read())
+                    connection.Open();
+                    MySqlCommand command = new MySqlCommand("SELECT * FROM employee WHERE id=@id", connection);
+                    command.Parameters.AddWithValue("@id", id);
+
+                    using (MySqlDataReader reader = command.ExecuteReader())
                     {
-                        list.Add(new EmployeeItem()
+                        while (reader.Read())
                         {
-                            id = reader.GetInt32("id"),
-                            nama = reader.GetString("nama"),
-                            jenkel = reader.GetString("nama"),
-                            alamat = reader.GetString("alamat")
-                        });
+                            list.Add(new EmployeeItem()
+                            {
+                                id = reader.GetInt32("id"),
+                                nama = reader.GetString("nama"),
+                                jenkel = reader.GetString("jenkel"),
+                                alamat = reader.GetString("alamat")
+                            });
+                        }
                     }
+                    connection.Close();
                 }
-                connection.Close();
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+                
             }
             return list;
         }
