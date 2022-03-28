@@ -3,12 +3,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TodoAppJWT.Data;
 using TodoAppJWT.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 
 namespace TodoAppJWT.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class TodoController : ControllerBase
     {
         private readonly ApiDbContext _context;
@@ -35,15 +38,15 @@ namespace TodoAppJWT.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateItem(ItemData item)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 await _context.Items.AddAsync(item);
                 await _context.SaveChangesAsync();
 
-                return CreatedAtAction("GetItem", new {item.id}, item);
+                return CreatedAtAction("GetItem", new { item.id }, item);
             }
 
-            return new JsonResult("Something went wrong"){StatusCode = 500};
+            return new JsonResult("Something went wrong") { StatusCode = 500 };
         }
 
         [HttpGet("{id}")]
@@ -51,9 +54,9 @@ namespace TodoAppJWT.Controllers
         {
             var item = await _context.Items.FirstOrDefaultAsync(x => x.id == id);
 
-            if(item == null)
+            if (item == null)
                 return NotFound();
-            
+
             return Ok(item);
         }
 
@@ -65,7 +68,7 @@ namespace TodoAppJWT.Controllers
 
             var existItem = await _context.Items.FirstOrDefaultAsync(x => x.id == id);
 
-            if(existItem == null)
+            if (existItem == null)
                 return NotFound();
 
             existItem.title = item.title;
@@ -82,9 +85,9 @@ namespace TodoAppJWT.Controllers
         {
             var existItem = await _context.Items.FirstOrDefaultAsync(x => x.id == id);
 
-            if(existItem == null)
+            if (existItem == null)
                 return NotFound();
-            
+
             _context.Items.Remove(existItem);
             await _context.SaveChangesAsync();
 

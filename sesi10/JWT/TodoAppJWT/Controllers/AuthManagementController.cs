@@ -100,8 +100,46 @@ namespace TodoAppJWT.Controllers
         {
             if (ModelState.IsValid)
             {
-                var existingUser = await _userManeger.FindByEmailAsync(user.email);
+                var existingUser = await _userManager.FindByEmailAsync(user.email);
+                if (existingUser == null)
+                {
+                    return BadRequest(new RegistrationResponse()
+                    {
+                        errors = new List<string>(){
+                            "Invalid Login Request"
+                        },
+                        success = false
+                    });
+                }
+
+                var isCorrect = await _userManager.CheckPasswordAsync(existingUser, user.password);
+                if (!isCorrect)
+                {
+                    return BadRequest(new RegistrationResponse()
+                    {
+                        errors = new List<string>() {
+                        "Invalid login request"
+                    },
+                        success = false
+                    });
+                }
+
+                var jwtToken = GenerateJwtToken(existingUser);
+
+                return Ok(new RegistrationResponse()
+                {
+                    success = true,
+                    token = jwtToken
+                });
             }
+
+            return BadRequest(new RegistrationResponse()
+            {
+                errors = new List<string>(){
+                    "Invalid payload"
+                },
+                success = false
+            });
         }
     }
 

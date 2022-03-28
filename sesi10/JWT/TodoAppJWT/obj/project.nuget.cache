@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0fMVABxJGD8zZyT7SDFWmjuHGf7OAl8vunHf4YrOdQ67f9W/XzQCW6zKyNf42ijWN4g6pqrmO9ZPsElW15BEEw==",
+  "dgSpecHash": "MPFFoW+5QNblc1VhNG1weNLT/26t8M94F52QRQyrU4XNdlnTh+Rs8dKKPrUOIjx5ZuqLNIaj7I0loODO0kBPaQ==",
   "success": true,
-  "projectFilePath": "D:\\Github\\CSharp\\sesi10\\TodoAppJwt\\TodoAppJWT.csproj",
+  "projectFilePath": "D:\\Github\\CSharp\\sesi10\\TodoAppJWT\\TodoAppJWT.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Cycak\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Cycak\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.15\\microsoft.aspnetcore.authentication.jwtbearer.5.0.15.nupkg.sha512",

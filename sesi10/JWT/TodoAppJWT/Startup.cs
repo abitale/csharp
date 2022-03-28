@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;   
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -35,32 +35,64 @@ namespace TodoAppJWT
         {
 
             services.Configure<JwtConfig>(Configuration.GetSection("JwtConfig"));
-            services.AddControllers();
+
             services.AddDbContext<ApiDbContext>(options =>
             options.UseSqlite(
                 Configuration.GetConnectionString("DefaultConnection")
             ));
+
+            services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "TodoAppJWT", Version = "v1" });
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Description = @"JWT Authorization header using the Bearer scheme. \r\n\r\n 
+                        Enter 'Bearer' [space] and then your token in the text input below.
+                        \r\n\r\nExample: 'Bearer 12345abcdef'",
+                    Name = "Authorization",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.ApiKey,
+                    Scheme = "Bearer"
+                });
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement()
+                {
+                        {
+                            new OpenApiSecurityScheme {
+                                Reference = new OpenApiReference {
+                                    Type = ReferenceType.SecurityScheme,
+                                    Id = "Bearer"
+                                }
+                            },
+                            new string[] { }
+                        }
+                });
             });
-            services.AddAuthentication(options => {
+
+            var key = Encoding.ASCII.GetBytes(Configuration["JwtConfig:Secret"]);
+            var tokenValidationParams = new TokenValidationParameters
+            {
+                ValidateIssuerSigningKey = true,
+                IssuerSigningKey = new SymmetricSecurityKey(key),
+                ValidateIssuer = false,
+                ValidateAudience = false,
+                ValidateLifetime = true,
+                RequireExpirationTime = false,
+                ClockSkew = TimeSpan.Zero
+            };
+            services.AddSingleton(tokenValidationParams);
+
+
+            services.AddAuthentication(options =>
+            {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             })
-            .AddJwtBearer(jwt => {
-                var key = Encoding.ASCII.GetBytes(Configuration["JwtConfig:Secret"]);
-
+            .AddJwtBearer(jwt =>
+            {
                 jwt.SaveToken = true;
-                jwt.TokenValidationParameters = new TokenValidationParameters {
-                    ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(key),
-                    ValidateIssuer = false,
-                    ValidateAudience = false,
-                    ValidateLifetime = true,
-                    RequireExpirationTime = false
-                };
+                jwt.TokenValidationParameters = tokenValidationParams;
             });
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
